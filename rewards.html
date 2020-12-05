@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scotland Cowboys</title>
+</head>
+<style>
+	html,body{
+	height:100%;
+	margin:0;
+}
+.menu{
+  	overflow: hidden; 
+  
+}
+.menu{
+  	display: inline;
+}
+li a{ 
+	color:black;
+  	padding: 20px 22px;
+	text-decoration:none;
+	font-family:cambria;
+}
+.menu:hover {
+	background-color:grey;
+}
+h1 {
+	font-family:arial-black;
+    font-size:40px;
+}
+.container{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+footer {
+  text-align:left;
+  padding: 3px;
+}
+
+.email{
+	margin:50px;
+	max-width:5000px;
+	color:black;
+	font-size:4vw;
+	font-family:cambria;
+	border:2px solid black;
+}
+.submit{
+	background-color:black;
+	padding: 3px 3px;
+	border:none;
+	cursor: pointer;
+	width:25%;
+	color: white;
+}
+
+.submissionfield { 
+	width: 450px;
+	height: 30px; 
+	border: 1px solid #999999; 
+}
+
+.signup{
+	text-align: center;
+	margin: 50px auto; 
+	width:500px;
+	border-style: solid;
+	border-width: 3px;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+ }
+
+</style>
+<body>
+<a href="index.html" ><img src="images/logo.PNG" align="left" width="60px" height="60px" /></a>
+
+<h1>Scotland Cowboys</h1>
+	<ul id="menu">
+		<strong>
+		<li class="menu"><a href="locations.html">Location</a></li>
+		<li class="menu"><a href="giftcards.html">Gift cards</a></li>
+		<li class="menu"><a href="rewards.html">Rewards</a></li>
+		<li class="menu"><a href="aboutus.html">About us</a></li>
+		</strong>
+	</ul>
+
+
+<div class="signup">
+<h3>Sign In</h3>
+	<form action="http://webdevbasics.net/scripts/demo.php" method="post" onsubmit="return validateForm();">
+		<label for="email1">E-Mail:</label><br>
+		<input type="email1" id="email1" name="email1"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		<input type="Submit" value="Login">
+</form> 
+</div>
+
+<div class="container">
+	<!--image-http://wyofile.com/wp-content/uploads/2012/04/cowboy-bar06a.jpg-->
+	<img src="images/cowboy-bar.jpg" align="center" style="width:100%" style="height:100%">
+	<!--https://www.wyofile.com/cowboy-bar-in-meeteetse-stays-true-to-its-western-outlaw-roots/-->
+	<div class="centered">JOINING OUR REWARDS PROGRAM, YOU GET ACCESS TO EXCLUSIVE COUPONS AND OFFERS</div>
+
+</div>
+<br>
+<div class="email_signup">
+	<form action="http://webdevbasics.net/scripts/demo.php" class="email" method="post" align="center" onsubmit="return validateForm1();">
+		<label for="email">Join our mailing list:<br></label>
+		<input type="email" id="email" class="submissionfield" name="email" placeholder="Enter email"><br>
+		<button type="submit" class="submit">submit</button>
+	</form>
+</div>
+<footer>
+	<ul>
+		<strong>
+		<li class="menu"><a href="contact.html">Contact us</a></li>
+		<!--Images facebook- https://www.flaticon.com/free-icon/facebook_124010  Twitter-https://www.flaticon.com/free-icon/twitter_124021 -->
+			<a href="https://www.facebook.com/"><img src="images/facebook.png" align="right" width="30" height="30" style="margin-left:5px;"></a>
+		<a href="https://twitter.com/login/"><img src="images/twitter.png" width="30" align="right" height="30"></a>
+		<strong/>
+	</ul>
+	<script>
+		function validateForm() {
+		if (document.forms[0].email1.value == "") {
+			alert("Email field empty");
+			return false;
+		}
+		
+		if (document.forms[0].password.value == "") {
+			alert("Password field empty");
+			return false;
+		}
+		}
+		function validateForm1() {
+			if (document.forms[1].email.value == "") {
+			alert("Email field empty");
+			return false;
+		}
+		}
+		</script>
+</footer>
+<p style="font-size:1vw;"><strong>Scotland Cowboys: Alejandro Campos, Marck Gumboc, Josh Senek, Nikhil Gaur, Abdi Yusuf</strong></p>
+</body>
+</html>

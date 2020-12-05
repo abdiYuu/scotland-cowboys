@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+	html,body{
+	height:100%;
+	margin:0;
+}
+
+.menu{
+  	overflow: hidden; 
+}
+  div {
+      display:block;
+}
+.menu{
+  	display: inline; 
+}
+li a{ 
+	color:black;
+  	padding: 20px 22px;
+	text-decoration:none;
+	font-family:cambria;
+}
+.menu:hover {
+	background-color:grey; 
+}
+h1 {
+	font-family:arial-black;
+    font-size:40px;
+}
+
+.centered {
+ 	position:absolute;
+    top:300px;
+	width:100%;
+	right:0%;
+	text-align:center;
+    color:white;
+    font-family:algerian;
+    font-size:40px;
+}
+footer {
+  text-align:left;
+  padding: 3px;
+  
+}
+
+.email{
+	margin:50px;
+	max-width:5000px;
+	color:black;
+	font-size:4vw;
+	font-family:cambria;
+	margin-top: 100px;
+	border:2px solid black;
+}
+.submit{
+	background-color:black;
+	padding: 3px 3px;
+	border:none;
+	cursor: pointer;
+	width:25%;
+	color: white;
+}
+
+.submissionfield { 
+	width: 400px; 
+	height: 30px; 
+	border: 1px solid #999999; 
+	}
+.names{
+	color:black;
+	font-family:cambria;
+	margin-left:20px;
+	font-size:8px;
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text],#formemail, input[type=tel], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.container{
+    position:relative;
+    text-align:center;
+    border-bottom: 5px solid #FFF;
+    color: #cfba86;
+    opacity:0.5;
+}
+.formTitle {
+    position:absolute;
+    font-family: 'Roboto', sans-serif;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    max-height:100%;
+	color: black;
+    font-size: 300px;
+    overflow:auto;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #df7259;
+	color: rgb(5, 4, 4);
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #e7a697;
+}
+
+.formcontainer {
+  border-radius: 5px;
+  background-color: #cfba86;
+  padding: 20px;
+  }
+
+.formlabel {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.forminput {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.formfield:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 720px) {
+  .formlabel, .forminput, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    font-size: 11px
+  }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" ><img src="images/logo.PNG" align="left" width="60px" height="60px" /></a>
+
+<h1>Scotland Cowboys</h1>
+	<ul>
+		<strong>
+		<li class="menu"><a href="locations.html">Location</a></li>
+		<li class="menu"><a href="giftcards.html">Gift cards</a></li>
+		<li class="menu"><a href="rewards.html">Rewards</a></li>
+		<li class="menu"><a href="aboutus.html">About us</a></li>
+		</strong>
+    </ul>
+    
+ <div class="container">
+ <!-- source: https://www.webstaurantstore.com/article/7/restaurant-lighting.html -->
+     <img src="images/lighting.png" align="center" width="100%" />
+        <div class="formTitle">
+            <h1 id="contacttitle">Contact Us</h1>
+        </div>
+    </div>
+<div class="formcontainer">
+  <form method="POST" action="thankyou.php">
+    <div class="formfield">
+      <div class="formlabel">
+        <label for="fname">First Name:</label>
+      </div>
+      <div class="forminput">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+      </div>
+    </div>
+    <div class="formfield">
+      <div class="formlabel">
+        <label for="lname">Last Name:</label>
+      </div>
+      <div class="forminput">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+      </div>
+    </div>
+    <div class="formfield">
+        <div class="formlabel">
+            <label for="email">E-Mail:</label>
+        </div>
+        <div class="forminput">
+            <input type="email" id="formemail" name="formemail" placeholder="Your e-mail.." required>
+        </div>
+    </div>
+    <div class="formfield">
+        <div class="formlabel">
+            <label for="postcode">Postal Code:</label>
+        </div>
+        <div class="forminput">
+            <input type="text" id="postcode"name="postcode" maxlength="7" placeholder="A0A0A0" pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]" required>
+        </div>
+    </div>
+    <div class="formfield">
+        <div class="formlabel">
+            <label for="phone">Phone Number:</label>
+        </div>
+        <div class="forminput">
+            <input type="tel" id="phone" name="phone" maxlength="14" placeholder="1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+        </div>
+    </div>
+    <div class="formfield">
+      <div class="formlabel">
+        <label for="subject">Subject:</label>
+      </div>
+      <div class="forminput">
+        <select id="subject" name="subject" required>
+            <option value=""disabled selected>Select Your Option</option>
+            <option value="giftcards">Gift Cards</option>
+            <option value="rewards">Rewards</option>
+            <option value="usa">Reservations</option>
+            <option value="menu">Menu</option>
+            <option value="careers">Careers</option>
+            <option value="" placeholder="Other, please specify...">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="formfield">
+      <div class="formlabel">
+        <label for="content">Content</label>
+      </div>
+      <div class="forminput">
+        <textarea id="content" name="content" placeholder="Let us know your concerns.." style="height:200px" required></textarea>
+      </div>
+    </div>
+    <div class="formfield">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+<p></p>
+<div  align="center" class="email_signup">
+	<form action="http://webdevbasics.net/scripts/demo.php" class="email" method="post" onsubmit="return validateForm();">
+		<label for="email" align="center">Join our mailing list:</label><br>
+		<input type="email" class="submissionfield"id="email" name="email"  placeholder="Enter email" ><br>
+		<button type="submit" class="submit">submit</button>
+	</form>
+</div>
+
+<script>
+	function validateForm() {
+		if (document.forms[1].email.value == "") {
+			alert("Email field empty");
+			return false;
+		}
+		}
+</script>
+
+
+<footer>
+	<ul>
+		<strong>
+		<li class="menu"><a href="contact.html">Contact us</a></li>
+		<a href="https://www.facebook.com/"><img src="images/facebook.png" align="right" width="30" height="30" style="margin-left:5px;"></a>
+		<a href="https://twitter.com/login/"><img src="images/twitter.png" width="30" align="right" height="30"></a>
+		</strong>
+		<p><strong class="names">Scotland Cowboys: Alejandro Campos, Marck Gumboc, Josh Senek, Nikhil Gaur, Abdi Yusuf</strong></p>
+	</ul>
+</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scotland Cowboys</title>
+</head>
+<style>
+	html,body{
+	height:100%;
+	margin:0;
+}
+.menu{
+  	overflow: hidden; 
+  
+}
+.menu{
+  	display: inline; 
+}
+li a{ 
+	color:black;
+  	padding: 20px 22px;
+	text-decoration:none;
+	font-family:cambria;
+}
+.menu:hover {
+	background-color:grey; 
+}
+h1 {
+	font-family:arial-black;
+    font-size:40px;
+}
+
+footer {
+  text-align:left;
+  padding: 3px;
+  color: white;
+}
+
+.email{
+	margin:50px;
+	max-width:5000px;
+	color:black;
+	font-size:4vw;
+	font-family:cambria;
+	border: 2px solid black;
+}
+.submit{
+	background-color:black;
+	padding: 3px 3px;
+	border:none;
+	cursor: pointer;
+	width:25%;
+	color: white;
+}
+
+.submissionfield { 
+	width: 250px; 
+	height: 30px; 
+	border: 1px solid #999999; 
+}
+.submissionfield2 { 
+	width: 450px; 
+	height: 30px; 
+	border: 1px solid #999999; 
+}
+.centered {
+ 	position:absolute;
+    top:200px;
+    left:5%;
+    color:white;
+    font-family:algerian;
+    font-size:50px;
+	max-width:400px;
+}
+.barcode_input{
+	 color:#000000;
+	 top:144px;
+	 left:50%;
+	 position:relative;
+	 width:400px;
+	 font-family:cambria;
+	 font-size:20px;
+	 margin-left: 40px;
+	 
+}
+.giftcard{
+	width:500px;
+	margin-left:20px;
+	position: relative;
+	bottom:94px;
+	right: 200px;
+}
+</style>
+<body>
+<!-- image-https://looka.com/onboarding?company_name=scotland%20cowboys-->
+<a href="index.html" ><img src="images/logo.PNG" align="left" width="60px" height="60px" /></a>
+
+<h1>Scotland Cowboys</h1>
+	<ul>
+		<strong>
+		<li class="menu" ><a href="locations.html">Location</a></li>
+		<li class="menu"><a href="giftcards.html">Gift cards</a></li>
+		<li class="menu"><a href="rewards.html">Rewards</a></li>
+		<li class="menu"><a href="aboutus.html">About us</a></li>
+		</strong>
+	</ul>
+	<!--image-https://thumbor.thedailymeal.com/8fNI2oObbiZkMvuc7UsZjYm8e-M=//https://www.thedailymeal.com/sites/default/files/story/2020/shutterstock_1751836019_0.jpg-->
+<img src="images/burger.jpg" align="center" width="100%" "/>
+<div class="centered">Join Our Rewards program AND get 10% off A GIFT CARD TODAY!</div><br>
+	<form action="http://webdevbasics.net/scripts/demo.php" class="barcode_input" method="post" align="center" onsubmit="return validateForm();">
+		<label for="barcode"><strong>Check gift card balance here!<br></strong></label><br>
+		<input type="text" id="barcode" name="barcode" class="submissionfield" placeholder="Enter barcode" ><br><br>
+		<button type="submit" class="submit">submit</button><br>
+		<label for="barcode"><strong><br>Join our rewards program today!</strong></label>
+	</form>
+<div class="email_signup"align="center">
+	<img src="images/giftcard.PNG" class="giftcard"   align="center" width="60%" height="300px"/>
+	<form action="http://webdevbasics.net/scripts/demo.php" class="email" method="post" onsubmit="return validateForm1();">
+		<label for="email">Join our mailing list:<br></label>
+		<input type="email" id="email" class="submissionfield2" name="email" placeholder="Enter email" ><br>
+		<button type="submit" class="submit">submit</button>
+	</form>
+</div>
+
+<footer>
+	<ul>
+		<strong>
+		<li class="menu"><a href="contact.html">Contact us</a></li>
+		<!--Images facebook- https://www.flaticon.com/free-icon/facebook_124010  Twitter-https://www.flaticon.com/free-icon/twitter_124021 -->
+		<a href="https://www.facebook.com/"><img src="images/facebook.png" align="right" width="30" height="30" style="margin-left:5px;"></a>
+		<a href="https://twitter.com/login/"><img src="images/twitter.png" width="30" align="right" height="30"></a>
+		</strong>
+	</ul>
+</footer>
+<script>
+	function validateForm() {
+	if (document.forms[0].barcode.value == "") {
+		alert("Barcode field empty");
+		return false;
+	}
+	}
+	function validateForm1() {
+		if (document.forms[1].email.value == "") {
+			alert("Email field empty");
+			return false;
+	}
+	}
+</script>
+<p style="font-size:1vw;"><strong>Scotland Cowboys: Alejandro Campos, Marck Gumboc, Josh Senek, Nikhil Gaur, Abdi Yusuf</strong></p>
+</body>
+</html>
